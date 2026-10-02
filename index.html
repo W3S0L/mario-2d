@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Super Mario 2D - Retro Platformer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="arcade-wrapper">
+        <header class="game-header">
+            <div class="logo-area">
+                <span class="title-badge">SUPER MARIO 2D</span>
+            </div>
+            <div class="top-buttons">
+                <button id="btn-mute" class="btn-icon" title="Wycisz/Włącz dźwięk (M)">🔊</button>
+                <button id="btn-pause" class="btn-icon" title="Pauza (P)">⏸️</button>
+            </div>
+        </header>
+
+        <div id="game-container">
+            <canvas id="gameCanvas" width="400" height="240"></canvas>
+        </div>
+
+        <!-- Virtual Touch Controls for Mobile/Touchscreens -->
+        <div class="touch-controls">
+            <div class="dpad">
+                <button id="btn-left" class="t-btn">◀</button>
+                <button id="btn-down" class="t-btn">▼</button>
+                <button id="btn-right" class="t-btn">▶</button>
+            </div>
+            <div class="action-buttons">
+                <button id="btn-run" class="t-btn btn-b" title="Bieg / Ogień">B</button>
+                <button id="btn-jump" class="t-btn btn-a" title="Skok">A</button>
+            </div>
+        </div>
+
+        <!-- Controls Guide -->
+        <footer class="keyboard-guide">
+            <div><span class="key-tag">A</span> <span class="key-tag">D</span> lub <span class="key-tag">←</span> <span class="key-tag">→</span> Ruch</div>
+            <div><span class="key-tag">SPACJA</span> / <span class="key-tag">W</span> / <span class="key-tag">Z</span> Skok</div>
+            <div><span class="key-tag">SHIFT</span> / <span class="key-tag">X</span> Bieg / Kula Ognia</div>
+            <div><span class="key-tag">S</span> / <span class="key-tag">↓</span> Kucanie</div>
+            <div><span class="key-tag">P</span> Pauza</div>
+            <div><span class="key-tag">M</span> Dźwięk</div>
+            <div><span class="key-tag">R</span> Reset</div>
+        </footer>
+    </div>
+
+    <!-- Scripts in proper dependency order -->
+    <script src="js/audio.js"></script>
+    <script src="js/sprites.js"></script>
+    <script src="js/entities.js"></script>
+    <script src="js/level.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

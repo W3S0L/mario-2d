@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    background: radial-gradient(circle at center, #1b2838 0%, #0d1218 100%);
+    color: #ffffff;
+    font-family: 'Press Start 2P', monospace, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.arcade-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #11141a;
+    padding: 16px 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(229, 37, 33, 0.25);
+    border: 3px solid #2d3748;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 4px 6px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-badge {
+    color: #e52521;
+    font-size: 16px;
+    text-shadow: 2px 2px 0 #000, 0 0 10px rgba(229, 37, 33, 0.6);
+    letter-spacing: 1px;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-icon {
+    background: #232a35;
+    border: 2px solid #3d4a5d;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-icon:hover {
+    background: #e52521;
+    border-color: #ff5252;
+    transform: translateY(-2px);
+}
+
+.btn-icon:active {
+    transform: translateY(1px);
+}
+
+#game-container {
+    position: relative;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
+    border: 4px solid #1a202c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameCanvas {
+    display: block;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    background: #5c94fc;
+}
+
+/* Touch Controls (Virtual Gamepad for Mobile/Touchscreens) */
+.touch-controls {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding: 0 10px;
+}
+
+@media (pointer: coarse), (max-width: 850px) {
+    .touch-controls {
+        display: flex;
+    }
+}
+
+.dpad {
+    display: flex;
+    gap: 8px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.t-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #232a35;
+    border: 3px solid #4a5568;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    touch-action: manipulation;
+}
+
+.t-btn:active {
+    background: #e52521;
+    transform: scale(0.92);
+}
+
+.t-btn.btn-a {
+    background: #00a800;
+    border-color: #38a169;
+}
+
+.t-btn.btn-b {
+    background: #e52521;
+    border-color: #e53e3e;
+}
+
+.keyboard-guide {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    font-size: 8px;
+    color: #a0aec0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.key-tag {
+    background: #2d3748;
+    color: #fcb000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #4a5568;
+}
